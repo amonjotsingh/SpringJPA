@@ -13,23 +13,23 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-//    @Bean
-//    CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
-//        return args -> {
-//            Student amonjot = new Student(
-//                    "Amonjot",
-//                    "Chhina",
-//                    "chhinajot@gmail.com",
-//                    26);
-//            studentRepository.save(amonjot);
-//            Student manu = new Student(
-//                    "Manu",
-//                    "Simriti",
-//                    "manu@gmail.com",
-//                    25);
-//            studentRepository.save(manu);
-//        };
-//
-//    }
+    @Bean
+    CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
+        return args -> {
+            Student amonjot = new Student(
+                    "Amonjot",
+                    "Chhina",
+                    "chhinajot@gmail.com",
+                    26);
+            studentRepository.save(amonjot);
+            Student manu = new Student(
+                    "Manu",
+                    "Simriti",
+                    "manu@gmail.com",
+                    25);
+            studentRepository.save(manu);
+        };
+
+    }
 
 }
